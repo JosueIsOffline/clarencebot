@@ -1,0 +1,22 @@
+{
+  "name": "roko-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "discord-player": "^6.6.6",
+    "discord-reply": "^0.1.2",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "moment-duration-format": "^2.3.2",
+    "moment-timezone": "^0.5.43"
+  }
+}
