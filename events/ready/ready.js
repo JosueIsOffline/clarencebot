@@ -4,6 +4,7 @@ require("dotenv").config();
 const webhook = new WebhookClient({
     url: process.env.WEBHOOK_LOGS_CHANNEL
 })
+
 module.exports = (client) => {
     let membersCount = client.guilds.cache
     .map((guild) => guild.memberCount)
