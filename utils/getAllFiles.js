@@ -7,7 +7,6 @@ module.exports = (directory, foldersOnly = false) => {
     const files = fs.readdirSync(directory, { withFileTypes: true })
     for(const file of files){
         const filePath = path.join(directory, file.name)
-
         if(foldersOnly){
             if(file.isDirectory()){
                 filesNames.push(filePath)
@@ -19,7 +18,6 @@ module.exports = (directory, foldersOnly = false) => {
             }
         }
     }
-
 
     return filesNames
 }

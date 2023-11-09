@@ -75,7 +75,7 @@ process.on("uncaughtException", (error) => {
 });
 
 // Event handler:
-events(client)
+ events(client)
 
 
 // Login to the bot
