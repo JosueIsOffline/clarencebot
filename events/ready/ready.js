@@ -1,9 +1,9 @@
 const { ActivityType, EmbedBuilder, WebhookClient } = require("discord.js")
 require("dotenv").config();
 
-const webhook = new WebhookClient({
+ const webhook = new WebhookClient({
     url: process.env.WEBHOOK_LOGS_CHANNEL
-})
+}) 
 
 module.exports = (client) => {
     let membersCount = client.guilds.cache
@@ -109,7 +109,7 @@ module.exports = (client) => {
         .setTimestamp()
         .setFooter({ text: "Logs" })
 
-        webhook.send({ embeds: [embed] })
+         webhook.send({ embeds: [embed] })
 
         client.logger.log(`
             
