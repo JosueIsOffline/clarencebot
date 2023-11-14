@@ -61,7 +61,7 @@ client.events = new Collection();
 // })
 client.queueToList = [];
 
-
+/* 
 // Handler errors: 
 client.on("error", (error) => client.logger.log(error, "error"));
 client.on("warn", (info) => client.logger.log(info, "warn"));
@@ -73,6 +73,7 @@ process.on("uncaughtException", (error) => {
   client.logger.log("Uncaught Execption is detected, restarting...", "info");
   process.exit(1);
 });
+ */
 
 // Event handler:
  events(client)
