@@ -6,9 +6,9 @@ ClarenceBot es un bot de discord creado para servir en un servidor privado llama
 
 # Pre-requesitos
 
-- [Visual Studio Code] (https://code.visualstudio.com/).
-- [Node.js] (https://nodejs.org/en).
-- [Nodemon] (https://www.npmjs.com/package/nodemon).
+- [Visual Studio Code](https://code.visualstudio.com/).
+- [Node.js](https://nodejs.org/en).
+- [Nodemon](https://www.npmjs.com/package/nodemon).
 
 
 # Como activar el bot
@@ -16,8 +16,8 @@ ClarenceBot es un bot de discord creado para servir en un servidor privado llama
 ## Paso 1. Clonar el repositorio
 
 '''
-
 git clone https://github.com/JosueIsOffline/clarencebot.git
+
 cd clarencebot
 
 '''
@@ -25,40 +25,30 @@ cd clarencebot
 ## Paso 2. Instalar las dependencias
 
 '''
-
 npm install
-
 '''
 
 ## Paso 3. Instalar nodemon
 
 '''
-
 npm install nodemon -g
-
 '''
 
-
 ## Paso 4.Crear archivo .env
-
 
 - Crear un archivo .env
 - Abre el archivo .env y añade el siguiente código:
 
 '''
-
 TOKEN=YourDiscordTokenHere
 PREFIX=YourCommandPrefix
 GUILD_ID=YourGuildID
 etc...
-
 '''
  
 ## Paso 5. Correr el proyecto
 
 '''
-
-    npm run dev
-
+npm run dev
 '''
 
