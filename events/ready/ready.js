@@ -127,3 +127,4 @@ module.exports = (client) => {
                              Bot conectado como ${client.user.tag}! (${new Date().toLocaleTimeString("es-DO", {timeZone: "America/Santo_Domingo"})})`
         , "success")
 }
+
