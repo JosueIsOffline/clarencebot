@@ -1,12 +1,15 @@
  # ClarenceBot
 
+![Node.js](https://img.shields.io/badge/Node.js-v21.2.0-green.svg)
+![Dioscord.js](https://img.shields.io/badge/Discord.js-v14.8.0-blue.svg)
+
+
 ## Descripción 
 
-ClarenceBot es un bot de discord creado para servir en un servidor privado llamado “Dominican Devs”, en este documento se estará explicando un poco sobre el bot, algunas funciones y todo lo necesario que debes saber si quieres entender este proyecto.
+ClarenceBot es un bot de discord creado para servir en un servidor de discord llamado “Dominican Devs”, en este documento se estará explicando un poco sobre el bot, algunas funciones y todo lo necesario que debes saber si quieres entender este proyecto.
 
 # Pre-requesitos
 
-- [Visual Studio Code](https://code.visualstudio.com/).
 - [Node.js](https://nodejs.org/en).
 - [Nodemon](https://www.npmjs.com/package/nodemon).
 
@@ -50,4 +53,3 @@ etc...
 ```
 npm run dev
 ```
-
