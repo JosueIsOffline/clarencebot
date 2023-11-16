@@ -2,6 +2,7 @@
 
 ![Node.js](https://img.shields.io/badge/Node.js-v21.2.0-green.svg)
 ![Dioscord.js](https://img.shields.io/badge/Discord.js-v14.8.0-blue.svg)
+[![License](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
 
 
 ## Descripción 
