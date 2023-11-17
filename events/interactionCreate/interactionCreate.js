@@ -1,4 +1,4 @@
-const { devs, guildId } = require('../../config/config.json')
+const { devs, guildId } = require('../../conf/config2.json')
 const getLocalCommands = require('../../utils/getLocalCommands')
 
 module.exports = async (client, interaction) => {
@@ -32,7 +32,6 @@ module.exports = async (client, interaction) => {
                 return
             }
         }
-
         if(commandObject.permissionsRequired?.length){
             for(const permission of commandObject.permissionsRequired){
                 if(!interaction.member.permissions.has(permission)){

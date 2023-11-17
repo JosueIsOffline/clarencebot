@@ -1,4 +1,4 @@
-const config = require("../../config/config")
+const config = require("../../conf/config")
 const getApplicationsCommands = require("../../utils/getApplicationsCommands")
 const getLocalCommands = require("../../utils/getLocalCommands")
 const areCommandDifferent = require('../../utils/areCommandDifferent')
