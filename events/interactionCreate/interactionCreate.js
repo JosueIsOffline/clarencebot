@@ -1,4 +1,4 @@
-const { devs, guildId } = require('../../conf/config2.json')
+const { devs, guildId } = require('../../conf/config.json')
 const getLocalCommands = require('../../utils/getLocalCommands')
 
 module.exports = async (client, interaction) => {

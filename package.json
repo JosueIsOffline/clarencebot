@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^1.6.2",
     "chalk": "4.1.2",
     "child_process": "^1.0.2",
     "discord-player": "^6.6.6",
@@ -19,6 +20,7 @@
     "moment-timezone": "^0.5.43",
     "mysql2": "^3.6.3",
     "node-fetch": "^2.6.9",
+    "openai": "^4.19.0",
     "sequelize": "^6.35.0"
   }
 }
