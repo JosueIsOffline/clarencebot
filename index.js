@@ -5,8 +5,11 @@ const {
   Partials,
   Collection,
 } = require("discord.js");
-const config = require("./config/config");
+const config = require("./conf/config");
 const events = require("./handlers/events");
+
+const db = require("./models");
+
 require("dotenv").config();
 const client = new Client({
   intents: [
@@ -46,6 +49,11 @@ client.logger = require("./utils/logger");
 // Getting the bot token:
 const AuthenticationToken = config.Client.TOKEN || process.env.TOKEN_DISCORD;
 
+if(!AuthenticationToken){
+  console.warn(
+    client.logger.log(' Authentication Token for Discord bot is required! Use Envrionment Secrets or config.js.', 'error')
+  )
+}
 // Handler:
 client.prefix_commands = new Collection();
 client.slash_commands = new Collection();
@@ -61,8 +69,7 @@ client.events = new Collection();
 // })
 client.queueToList = [];
 
-
-// Handler errors: 
+// Handler errors:
 client.on("error", (error) => client.logger.log(error, "error"));
 client.on("warn", (info) => client.logger.log(info, "warn"));
 process.on("unhandledRejection", (error) =>
@@ -75,10 +82,14 @@ process.on("uncaughtException", (error) => {
 });
 
 // Event handler:
-events(client)
-
+events(client);
 
 // Login to the bot
-client.login(AuthenticationToken).catch((err) => {
-    client.logger.log("Something went wrong while connecting to the bot...", "warn")
+db.sequelize.sync().then(() => {
+  client.login(AuthenticationToken).catch((err) => {
+    client.logger.log(
+      "Something went wrong while connecting to the bot...",
+      "warn"
+    );
+  });
 });
