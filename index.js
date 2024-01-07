@@ -89,12 +89,20 @@ process.on("uncaughtException", (error) => {
 events(client);
 
 // Login to the bot
-db.sequelize.sync().then(() => {
-  console.log('\n\n\n----------BOT----------')
+// db.sequelize.sync().then(() => {
+//   console.log('\n\n\n----------BOT----------')
+//   client.login(AuthenticationToken).catch((err) => {
+//     client.logger.log(
+//       "Something went wrong while connecting to the bot...",
+//       "warn"
+//     );
+//   });
+// });
+
+console.log('\n\n\n----------BOT----------')
   client.login(AuthenticationToken).catch((err) => {
     client.logger.log(
       "Something went wrong while connecting to the bot...",
       "warn"
     );
   });
-});
