@@ -83,12 +83,10 @@ process.on("uncaughtException", (error) => {
 
 // Dasboard
 
-require('./dashboard/server')
-console.log('----------DASHBOARD----------')
+// require('./dashboard/server')
+// console.log('----------DASHBOARD----------')
 // Event handler:
 events(client);
-
-
 
 // Login to the bot
 db.sequelize.sync().then(() => {
