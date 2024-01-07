@@ -9,7 +9,7 @@ const webhook = new WebhookClient({
 module.exports = async (client, member) => {
     
     const embed = new EmbedBuilder()
-        .setTitle(`¡Bienvenido brothel o sistel a ${member.guild.name}!`)
+        .setTitle(`¡Bienvenido a ${member.guild.name}!`)
         .setDescription(`Klok ${member.user.username} (Aun no me acostumbro a ser un dominicano XD, lo hice bien? Jiji)`)
         .setThumbnail(member.user.displayAvatarURL())
         .setImage("https://i.pinimg.com/originals/f0/38/37/f03837e4f1b07f72bff8ee592a91adef.gif")
@@ -32,9 +32,9 @@ module.exports = async (client, member) => {
     
         if(!userDB){
             userDB = await User.create({
+                id: member.user.id,
                 user: member.user.tag,
                 discriminator: member.user.discriminator,
-                createdAt: new Date().toLocaleDateString("es-DO", {timeZone: "America/Santo_Domingo"})
             })
         }
     } catch (error) {
@@ -45,7 +45,7 @@ module.exports = async (client, member) => {
 
     const hiEmbed = new EmbedBuilder()
         .setAuthor({
-            name: `:wave: ${member.user.username} ha entrado al servidor!`,
+            name: `${member.user.username} ha entrado al servidor!`,
             iconURL: member.user.displayAvatarURL({ dynamic: true })
         })
         .setFooter({
